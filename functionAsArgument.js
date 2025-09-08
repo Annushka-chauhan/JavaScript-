@@ -1,4 +1,4 @@
-//printVariable is the variable created having the function defination and it is the kind of function
+//printVariable (function) is the variable created having the function defination and it is the kind of function
 
 function printVariable(variable){
   console.log(variable);
