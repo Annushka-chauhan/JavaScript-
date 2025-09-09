@@ -13,12 +13,12 @@
 //Closures are mainly defined as functions inside of other functions
 
 // we have inner scope which has access to variable2 and also has access to variable1 from the outter scope of the function (print)
-let c=3
+let val=3
 function printl(variable1){
    return function funcl(variable2){
     console.log(variable1)
     console.log(variable2)
-    console.log(c)//gives 3 
+    console.log(val)//gives 3 
   }
 }
 
