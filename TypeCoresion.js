@@ -28,3 +28,15 @@ console.log(hi+num2) //string (ie Hello1)
 console.log(hi-num2) //gives NaN as hello is not a number and we cannot convert it into number 
 
 //but but if we have "3" in hi it is converted to number and 3-1 we have got 2
+
+
+
+//=== compare the values but do not inplicitly convert them
+//!== compares ont the basis of real way ie without
+//js implicitally converting some variables
+
+
+const user1 = null
+const user2 =undefined
+console.log(user1 == user2)// gives true as both the variables does not haave anything
+console.log(user1===user2)//gives false both have diffrennt meaning
