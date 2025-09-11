@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Var Reference</title>
+</head>
+<body>
+  <script>
+    //array and objects points to a memory reference while other variable datatype has a solid value
+    let a=10
+    let b= "Hi"
+    let c=a
+    c=c+1
+    let d= [1,2] //when we create an array by bracket then this points to an address (say 0x01) at which the actual value is present 
+    let e=d //0x01
+    //this will modify both d and e as both of them point to the same reference
+    d.push(3)
+    //this will point to the other adderss and has diffrent value //0x02
+    e= [3,4,5]
+    e.push(6)
+    console.log("a = "+a)
+    console.log("b= " +b )
+    console.log("c = "+c)
+    console.log("d= "+d)
+    console.log("e = "+e)
+
+
+    //this same works with arra as well as objects 
+    let details ={
+      name: "Iva",
+      age: "24",
+      address: "somewhere"
+    }
+    let sameDetails = details
+    details.name = "Jia"
+    //JSON.stringify == JSON is an object having property/function as stringify where we pass an object and this converts the object into string version (useful for printing out objects )
+
+    console.log("The object detail are: "+JSON.stringify(details));
+    console.log("Same details refrencing to the same address as details is :"+JSON.stringify(sameDetails))
+
+
+    let num1= [1,2]// value = 0x01
+    let num2= [1,2]//value = 0x02
+    //this must give true as both of them are the same but we get false on comparing both why ??
+    //All the values in js when compared are compared on the basis of value and both the arrays have the diffrent value 
+    console.log(num1===num2)
+
+
+    //if we have defined two array with const then the address can only be changed if we reassign that variable otherwise pushing (modifying) the elements does not throw error as the memory of the variable is the same  
+    //THIS GIVES ERROR 
+    // const values ={ //0x03
+    //   name:"Fiza",
+    //   age: 43,
+    // }
+    // values={ //0x04
+    //   name: "Fiza",
+    //   age: 44,
+    // }
+
+    const valArr= [1,2]//0x01
+    const elementToadd = 3 //3
+    add(valArr, elementToadd)
+    console.log(valArr)
+    console.log(elementToadd)
+    function add(array, element){ //0x01,3
+      element+=1
+      array.push(element)
+
+    }
+  </script>
+
+</body>
+</html>
