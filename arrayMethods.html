@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //Whenever the function is defined inside the object we call it as method 
+    //otherwise when normally declared is called function 
+
+    //This function inside the obj is called method 
+    // const obj ={
+    //   swrfg(){
+    //     //dewwgh
+    //   }
+    // }
+
+    //Normal function
+    //function dwewte(){
+    //wwtgw
+    //}
+
+
+    //ARRAY METHODS (FUNCTIONS ON ARRAY):--->
+
+
+    //1. forEach->
+    const a=[1,2,3,4,5]
+    //this forEach function takes for every element in the array 
+    a.forEach((number,index)=>{
+        console.log(number+"->"+index);
+    })
+
+    // 2. map-->
+    //can modify the elemnts of an array using map 
+    //whenever we do some operations while iterating in the array these are not modified in thee original array but a brand new array is created with modifications and we take it as this resolves the problem of referencing etc 
+    //For eg :-
+    const b= [2,4,6,8,10]
+    const newArr =a.map(number =>{
+      return number*2;
+    })
+    console.log(newArr)
+
+
+    //.filter-->
+    //it also does not affect/modify the original array but return a brand new array with required condition
+    //it return true or false
+    //provides the elements according to a given condition if return true than that elements (series of elements giving condition true)must be involved otherwise on false this must not be included 
+    //for eg :-
+    const newArr2 =a.filter(number => {
+      return number<=2
+    })
+    //we get [1,2] as per the condition being true and gives that number while iterating
+    console.log(newArr2)
+
+    //.find--->
+  //the first time the function returns true it stops looping through it and provide us with the element for which the condn became true for eg : if i try to print the element greater than 2 than we have condn true when 3 is encounted so we return the first value for which the condition became true ie 3 here.
+
+  //Insted of returning us the array it returns the single element from our array 
+  const n=a.find(number => {
+    return number>2
+  })
+  console.log(n)
+
+  //some-->
+  //returns true/false are there any array elements that is fullfilling the condition provided 
+  const isTrue =a.some(number=>{
+    return number>2 //gives truee as there is atleast one elemnt fulfilling condition 
+  })
+  console.log(isTrue)
+
+
+  //every-->
+  //does every single element fulfill the condition provided true or false 
+  //reverse of some(ie atleast one element)
+  const isTrue2 =a.every(number =>{
+    return number >=1
+  })
+  console.log(isTrue2)
+
+  //reduce-->
+  //we are taking the array and reducing it to one singular value by looping through it and doing something each time 
+  //Takes two parameters 1. previous value (accumulator) 2. number itself that we are using before(each element from the array while iterating)
+  const d= a.reduce((sum, number)=>{
+    return sum +number
+  },0 )//taking initial sum as 0
+  console.log(d)
+
+
+  //ASSSIGNMENT 
+  const items =[
+    {price: 10},
+    {price : 20},
+     {price : 24},
+      {price : 14},
+  ]
+
+  //give the sum of all the prices of item using reduce function
+  const totalsum = items.reduce((sum, item)=>{
+    return sum+item.price
+  },0)
+  console.log(totalsum)
+
+  //includes
+  //returns true if the array fulfill the condition otherwise returns false 
+  const red= a.includes(2)
+  console.log(red)
+  </script>
+</body>
+</html>
