@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New and This Keyword</title>
+</head>
+<body>
+  <script>
+    //We have created a function which allows us to create user object
+    function createUser(name, age){
+      return {name:name, age: age,human: true}
+    }
+   const user= createUser("Anushka", 20)
+   console.log(user)
+
+    //Creation of objects using new keyword
+
+
+    //This provides the current date when we are working on
+    const date =new Date() //date is an object in which various methods can be applied
+    console.log(date)
+    console.log(date.getDay())
+    console.log(date.getHours())
+
+
+    //making constuctor that is used repeatdly by the object 
+    //this keyword reference the current object we are trying to create  
+
+    //this exmple:
+    //function UserHey(name, age){
+    //this ={}
+    //grhrehrt
+    //return this
+    //}
+
+
+    function User(name, age){
+       this.name=name
+       this.age=age
+       this.human=true 
+    }
+    const userMade= new User("Anushka",20)
+
+    console.log(userMade)
+
+    class User2{
+      constructor(name,age){
+        this.name=name
+        this.age=age
+        this.human=true
+      }
+      printName(){
+        //this points the actual instance of this user 
+        console.log(this.name)
+      }
+    }
+    const user2=new User2("Riya",25)
+    console.log(user2)
+    user2.printName()
+  </script>
+</body>
+</html>
