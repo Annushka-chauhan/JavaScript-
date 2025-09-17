@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="div-id">This is an ID element</div>
+  <div class="div-class">This is a Class Element</div>
+  <div class="div-class">This is a Class Element</div>
+  <div class="div-class">This is a Class Element</div>
+  <script>
+    //SELECTING ELEMENTS BY ID
+    //we get the exact div whose id is passed in the console
+     const divWithId= document.getElementById("div-id")
+     divWithId.style.color = "red"
+
+
+     //SELECTING ELEMENTS BY CLASS 
+     //this returns an array of elements having class name as the class name can be same for various html objects
+     const divWithClass= document.getElementsByClassName("div-class")
+     //gives an html collection of elements with the same class name 
+     console.log(divWithClass)
+     //we cannot do this as this is an array and we cannot directly apply changes to the collection of arrays ie 
+     //divWithClass.style.color= "green" instead go on each one of the element in the array 
+     //but before iterating convert the html collection into an array 
+    const divWithClassArray = Array.from(divWithClass)
+   
+     divWithClassArray.forEach(div => div.style.color="green")
+     //for individual element property
+      divWithClass[0].style.color="pink"
+
+
+  </script>
+</body>
+</html>
