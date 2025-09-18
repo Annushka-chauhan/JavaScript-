@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+  <title>Normal Vs Arrow Function</title>
+</head>
+<body>
+  <button>Click Me</button>
+
+  <script>
+    const button = document.querySelector("button")
+    button.addEventListener("click", () => {
+      console.log("Arrow This")
+      //this for arrow Function points to the global scope of the windows and provide all the element in the windows 
+      console.log(this)
+    })
+    button.addEventListener("click", function(e) {
+      console.log("Function This")
+      //this for normal function points to the current event only in which it is declared that is button and hence gives button as an object in console
+      console.log(this)
+    })
+
+    // So when the event fires:
+
+    //Arrow function: this = window (outer scope)
+
+    //Normal function: this = button (event target)
+  </script>
+</body>
+</html>
