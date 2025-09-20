@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dom Traversal</title>
+  <style>
+    div{
+      color: black;
+    }
+    div > div {
+  margin-left: .5rem;  
+  border-left: 1px solid #777;
+  padding-left: 0.25rem;
+}
+
+  </style>
+  <!-- defer means: download the script in the background, but execute it only after the HTML is fully parsed (and before DOMContentLoaded). It also preserves execution order if you have multiple deferred scripts. -->
+  <script defer src="dom.js"></script>
+</head>
+<body>
+  <div id="grand-parent">
+    Grand Parent
+  
+  <div>
+    Parent 1
+    <div id="child-one">Child 1</div>
+    <div>Child 2</div>
+  </div>
+  <div>Parent 2</div>
+</div>
+</body>
+</html>
