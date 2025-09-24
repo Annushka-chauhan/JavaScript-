@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Ternary Operator</title>
+</head>
+<body>
+  <script>
+    const isUserLoggedIn= true;
+    if(isUserLoggedIn){
+      console.log("Logged in")
+    }else {
+      console.log("Not logged in")
+    }
+
+    isUserLoggedIn ?  console.log("Logged in") : console.log("Not logged in")
+    //We commanly not use the ternary operator but in case where the variable has a values based on true/false ternary operator is prefferd 
+
+    // const welcomeMessage= ""
+    // if(isUserLoggedIn){
+    //   welcomeMessage="Welcome"
+    // }else {
+    //   welcomeMessage="Please log in"
+    // }
+    // console.log(welcomeMessage)
+
+    const welcomeMessage = isUserLoggedIn ? "Welcome" : "Please Login"
+  </script>
+</body>
+</html>
