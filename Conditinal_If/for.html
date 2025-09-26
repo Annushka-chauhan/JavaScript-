@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Loop Practice</title>
+</head>
+<body>
+  <script>
+    for(let i=0; i<5; i++){
+      console.log("Hi")
+    }
+    //Break statement 
+    for(let i=0; i<5; i++){
+      console.log("Start")
+      if(i>2)break
+      console.log("end")
+    }
+    //Continue keyWord This is very similar to break but instead of exsiting out of the entire statement , it exit from the current iteratiion of the  for loop
+    for(let i=0; i<5; i++){
+      console.log("start"+i);
+      if(i>2)continue;
+      console.log("End" + i)
+    }
+
+    
+    //ASSIGNMENT 
+    //Create a  for loop which loops from 0 to 10 and print outs all values from 0 to 10 
+
+    //Modify this loop and exit the loop when the value is equal to 5
+
+    for(let i=0; i<10; i++){
+      if(i>=5)break;
+      console.log(i)
+    }
+  </script>
+</body>
+</html>
