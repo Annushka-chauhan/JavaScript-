@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Short Circuit Evaluation</title>
+</head>
+<body>
+  <!-- Short Circuit evaluation means the code is short circuiting to evaluate a code by looking at some initial conditions only
+ eg if we have true|| true then the js is smart enough to know that after true if there is || (or) and we have anything the answer ultimately will be true so this is short circuit condition
+  
+  -->
+ <script>
+
+  console.log(true|| false)
+  printTrue() || printFalse()
+  function printTrue(){
+     console.log("True")
+     return true
+  }
+  function printFalse(){
+     console.log("False")
+     return false
+  }
+  //Actual case 
+  function printName(name){
+    //if the name is provided then the condition will be true and the name is printed otherwise defalt will get printed out(Great way to create default values)
+
+    name =name || "Default"
+    console.log(name)
+  }
+  printName() 
+
+
+  const person= {
+    address: {
+      street: "Main st"
+    }
+  }
+  //the below code is very bulky
+  // if(person!= null && person.address !=null)
+  // {
+  //   console.log(person.address.street)
+  // }
+  //instead we use 
+  console.log(person && person.address && person.address.street)
+ </script>
+</body>
+</html>
