@@ -4,6 +4,7 @@
 
 //hoisting cannot be done we firstly have to define the variable then work on it 
 
+//Block specified 
 {
   let f=4
   console.log(f)//works fine 

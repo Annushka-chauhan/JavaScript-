@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prashant Tomer - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #bdc3c7;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            font-size: 14px;
+            color: #ecf0f1;
+            margin-top: 20px;
+        }
+
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+            font-weight: 600;
+        }
+
+        .summary-text {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .skill {
+            background: #ecf0f1;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 15px;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+
+        .experience-item, .education-item {
+            margin-bottom: 25px;
+        }
+
+        .job-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .company-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .company {
+            font-style: italic;
+            color: #7f8c8d;
+            font-size: 15px;
+        }
+
+        .date {
+            color: #95a5a6;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .description {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .degree {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .university {
+            font-style: italic;
+            color: #7f8c8d;
+            font-size: 15px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            .content {
+                padding: 30px 25px;
+            }
+
+            header {
+                padding: 40px 25px;
+            }
+
+            .company-info {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .date {
+                margin-top: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Prashant Tomer</h1>
+            <div class="subtitle">Front-End Developer</div>
+            <div class="contact-info">
+                Email: prashant.tomer@apes.ac.in | Phone: 9913398220 | 
+                LinkedIn: <a href="https://www.linkedin.com/in/prashant-tomer-a477b52D" target="_blank">www.linkedin.com/in/prashant-tomer-a477b52D</a>
+            </div>
+        </header>
+
+        <div class="content">
+            <section>
+                <h2>Summary</h2>
+                <p class="summary-text">
+                    Passionate and detail-oriented front-end developer with over 3 years of experience building responsive and accessible web applications. Skilled in HTML, CSS, JavaScript, and modern frameworks like React.
+                </p>
+            </section>
+
+            <section>
+                <h2>Skills</h2>
+                <div class="skills-container">
+                    <div class="skill">HTML</div>
+                    <div class="skill">CSS</div>
+                    <div class="skill">JavaScript</div>
+                    <div class="skill">React</div>
+                    <div class="skill">Git</div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Experience</h2>
+                <div class="experience-item">
+                    <div class="job-title">Front-End Developer</div>
+                    <div class="company-info">
+                        <div class="company">APES Engineering College, Ghaziabad</div>
+                        <div class="date">2020 – 2022</div>
+                    </div>
+                    <p class="description">
+                        Developed and maintained front-end features using React and Redux. Collaborated with designers and backend developers to create seamless user experiences. Optimized web performance and accessibility.
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Education</h2>
+                <div class="education-item">
+                    <div class="degree">PhD in Computer Science</div>
+                    <div class="company-info">
+                        <div class="university">Delhi University</div>
+                        <div class="date">2020</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

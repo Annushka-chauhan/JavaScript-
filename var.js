@@ -4,6 +4,8 @@
 
 //by using var we can redefine as well as redeclare 
 
+//Functional scoped 
+
 var b=1
 // var b=3 // gives 3 redeclare 
 //b=7 // reassign gives 7
