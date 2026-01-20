@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Alert Box -->
+  <div id="alert">
+    <div class="alert-title">Congratulations!!</div>
+    You got them all right
+  </div>
+
+  <!-- Quiz Form -->
+  <form id="quiz-form">
+    <div>
+      <ol>
+
+        <!-- Question 1 -->
+        <li class="question-item">
+          <div>What does HTML stand for?</div>
+          <ol>
+            <li class="answer-item">
+              <label>
+                <input class="answer" type="radio" name="answer-1" value="true">
+                HyperText Markup Language
+              </label>
+            </li>
+            <li class="answer-item">
+              <label>
+                <input class="answer" type="radio" name="answer-1" value="false">
+                HighText Machine Language
+              </label>
+            </li>
+            <li class="answer-item">
+              <label>
+                <input class="answer" type="radio" name="answer-1" value="false">
+                Hyperlink Making Language
+              </label>
+            </li>
+          </ol>
+        </li>
+
+        <!-- Question 2 -->
+        <li class="question-item">
+          <div>Which tag is used to embed JavaScript in HTML?</div>
+          <ol>
+            <li class="answer-item">
+              <label>
+                <input class="answer" type="radio" name="answer-2" value="false">
+                &lt;js&gt;
+              </label>
+            </li>
+            <li class="answer-item">
+              <label>
+                <input class="answer" type="radio" name="answer-2" value="true">
+                &lt;script&gt;
+              </label>
+            </li>
+            <li class="answer-item">
+              <label>
+                <input class="answer" type="radio" name="answer-2" value="false">
+                &lt;javascript&gt;
+              </label>
+            </li>
+          </ol>
+        </li>
+
+        <!-- Question 3 -->
+        <li class="question-item">
+          <div>Which CSS property is used to change text color?</div>
+          <ol>
+            <li class="answer-item">
+              <label>
+                <input class="answer" type="radio" name="answer-3" value="true">
+                color
+              </label>
+            </li>
+            <li class="answer-item">
+              <label>
+                <input class="answer" type="radio" name="answer-3" value="false">
+                text-color
+              </label>
+            </li>
+            <li class="answer-item">
+              <label>
+                <input class="answer" type="radio" name="answer-3" value="false">
+                font-color
+              </label>
+            </li>
+          </ol>
+        </li>
+
+      </ol>
+
+      <button type="submit">Check</button>
+    </div>
+  </form>
+
+</body>
+</html>
